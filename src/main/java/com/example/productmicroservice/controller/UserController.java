@@ -15,12 +15,12 @@ public class UserController {
 
     private CustomerService customerService;
 
-    @PostMapping("api/customer")
+    @PostMapping(path = "api/customer")
     public void createCustomer(@RequestBody CustomerDTO customer)
     {
         customerService.createCustomer(customer);
     }
-    @GetMapping("api/customers")
+    @GetMapping(path = "api/customers")
     public List<CustomerDTO> getAllCustomers()
     {
         return customerService.getAllCustomers();

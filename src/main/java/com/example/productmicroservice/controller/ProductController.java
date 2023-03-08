@@ -14,12 +14,12 @@ import java.util.Optional;
 public class ProductController {
 
     private ProductService productService;
-    @PostMapping("api/product")
+    @PostMapping(path = "api/product")
     public void createProduct(@RequestBody ProductDTO product)
     {
         productService.createProduct(product);
     }
-    @GetMapping("api/products")
+    @GetMapping(path = "api/products")
     public List<ProductDTO> getAllProducts()
     {
         return productService.getAllProducts();
