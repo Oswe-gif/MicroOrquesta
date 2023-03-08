@@ -1,7 +1,7 @@
 package com.example.productmicroservice.controller;
 
 import com.example.productmicroservice.controller.entity.CustomerDTO;
-import com.example.productmicroservice.repository.CustomerRepository;
+import com.example.productmicroservice.logic.CustomerService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,15 +14,15 @@ import java.util.List;
 @AllArgsConstructor
 public class UserController {
 
-    private CustomerRepository customerRepository;
+    private CustomerService customerService;
     @GetMapping("api/customers")
     public List<CustomerDTO> getAllCustomers()
     {
-        return customerRepository.findAll();
+        return customerService.getAllCustomers();
     }
     @PostMapping("api/customer")
     public void createCustomer(@RequestBody CustomerDTO customer)
     {
-        customerRepository.save(customer);
+        customerService.createCustomer(customer);
     }
 }

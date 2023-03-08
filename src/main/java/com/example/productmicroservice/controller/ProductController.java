@@ -1,6 +1,7 @@
 package com.example.productmicroservice.controller;
 
 import com.example.productmicroservice.controller.entity.ProductDTO;
+import com.example.productmicroservice.logic.ProductService;
 import com.example.productmicroservice.repository.ProductRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -12,21 +13,21 @@ import java.util.Optional;
 @AllArgsConstructor
 public class ProductController {
 
-    private ProductRepository productRepository;
+    private ProductService productService;
     @GetMapping("api/products")
     public List<ProductDTO> getAllProducts()
     {
-        return productRepository.findAll();
+        return productService.getAllProducts();
     }
     @GetMapping(path = "api/product/{id}")
     public Optional<ProductDTO> getProduct(@PathVariable String id)
     {
-        return productRepository.findById(id);
+        return productService.getProduct(id);
     }
     @PostMapping("api/product")
     public void createProduct(@RequestBody ProductDTO product)
     {
-        productRepository.save(product);
+        productService.createProduct(product);
     }
 
 }
