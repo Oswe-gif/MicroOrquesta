@@ -1,25 +1,30 @@
 package com.example.productmicroservice.controller;
 
+import com.example.productmicroservice.logic.CustomerService;
+import com.example.productmicroservice.logic.ProductService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @AllArgsConstructor
 public class OrderOrchestratorController {
-    private ProductController productController;
-    private UserController userController;
+    private CustomerService customerService;
+    private ProductService productService;
 
-    public String createOrder()
+    @PostMapping(path = "api/order{id}")
+    public String createOrder(@PathVariable String id)
     {
-
+        //create an order
         return "";
     }
-    @GetMapping("api/productOrder")
+
+    @GetMapping("api/order")
     public String processOrder()
     {
-        //List<Product> products = productController.createProduct();
-        //List<Customer> customers = userController.createCustomer();
+        //search an order
         return "";
     }
 }
