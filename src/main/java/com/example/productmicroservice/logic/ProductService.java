@@ -1,5 +1,5 @@
 package com.example.productmicroservice.logic;
-import com.example.productmicroservice.controller.entity.ProductDTO;
+import com.example.productmicroservice.controller.dto.ProductDTO;
 import com.example.productmicroservice.repository.ProductRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

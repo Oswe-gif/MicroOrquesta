@@ -1,7 +1,6 @@
 package com.example.productmicroservice.controller;
 
-import com.example.productmicroservice.controller.entity.CustomerDTO;
-import com.example.productmicroservice.controller.entity.ProductDTO;
+import com.example.productmicroservice.controller.dto.CustomerDTO;
 import com.example.productmicroservice.logic.CustomerService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;

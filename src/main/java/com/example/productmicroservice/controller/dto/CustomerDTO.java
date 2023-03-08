@@ -1,4 +1,4 @@
-package com.example.productmicroservice.controller.entity;
+package com.example.productmicroservice.controller.dto;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -13,4 +13,11 @@ public class CustomerDTO {
     private String id;
     private String name;
     private int age;
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }
