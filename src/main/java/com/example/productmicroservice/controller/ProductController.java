@@ -14,6 +14,11 @@ import java.util.Optional;
 public class ProductController {
 
     private ProductService productService;
+    @PostMapping("api/product")
+    public void createProduct(@RequestBody ProductDTO product)
+    {
+        productService.createProduct(product);
+    }
     @GetMapping("api/products")
     public List<ProductDTO> getAllProducts()
     {
@@ -24,10 +29,6 @@ public class ProductController {
     {
         return productService.getProduct(id);
     }
-    @PostMapping("api/product")
-    public void createProduct(@RequestBody ProductDTO product)
-    {
-        productService.createProduct(product);
-    }
+
 
 }
