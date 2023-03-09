@@ -19,6 +19,6 @@ public class SellerController {
 
     @GetMapping(path = "api/sellers")
     public List<SellerDTO> getAllSellers() {return sellerService.getAllSellers();}
-    @GetMapping(path = "api/seller{id}")
+    @GetMapping(path = "api/seller/{id}")
     public Optional<SellerDTO> getSeller(@PathVariable String id) {return sellerService.getSeller(id);}
 }
