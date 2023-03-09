@@ -25,7 +25,7 @@ public class UserController {
         return customerService.getAllCustomers();
     }
     @GetMapping(path = "api/customer/{id}")
-    public Optional<CustomerDTO> getProduct(@PathVariable String id)
+    public Optional<CustomerDTO> getCustomer(@PathVariable String id)
     {
         return customerService.getCustomer(id);
     }
