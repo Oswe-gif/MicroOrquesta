@@ -5,7 +5,7 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+@Document (value = "seller")//the collection in mongoDB is called "seller"
 @Getter
 @Setter
 public class SellerDTO {

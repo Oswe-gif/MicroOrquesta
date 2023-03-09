@@ -3,7 +3,6 @@ import com.example.productmicroservice.controller.dto.SellerDTO;
 import com.example.productmicroservice.repository.SellerRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 
